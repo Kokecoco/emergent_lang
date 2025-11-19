@@ -40,7 +40,7 @@ class ReplayMemory(object):
 
     def __len__(self):
         return len(self.memory)
-      
+
 class DQN(nn.Module):
     def __init__(self, n_observations, n_actions):
         super(DQN, self).__init__()
@@ -52,7 +52,7 @@ class DQN(nn.Module):
         x = F.relu(self.layer1(x))
         x = F.relu(self.layer2(x))
         return self.layer3(x)
-      
+
 BATCH_SIZE = 128
 GAMMA = 0.99
 EPS_START = 0.9
